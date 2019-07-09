@@ -1,52 +1,51 @@
 import java.util.*;
-public class Result 
-{
-	public static void main(String[] args)
+class result
+  {
+      public static void main(String args[])
 	{
-		Scanner sc = new Scanner(System.in);
-		String name, std, grade = null;
-		int m1, m2, m3, total;
-		double percent = 0.0;
-		System.out.println("Enter :name, std, subject 1 marks, subject 2 marks, subject 3 marks");
-		name = sc.nextLine();
-		std = sc.nextLine();
-		m1 = sc.nextInt();
-		m2 = sc.nextInt();		
-		m3 = sc.nextInt();
-		total = m1 + m2 + m3;
-		if(m1 >= 45 && m2 >= 45 && m3 >=45)
-		{
-			System.out.println("You are pass");
-			percent = total / 3;
-			if(percent >= 75)
+		Scanner sc=new Scanner(System.in);
+        	String name,std,grade=null;
+        	int sub1,sub2,sub3,total;
+         	double percentage=0;
+        	System.out.println("Enter name,std,sub1 marks,sub2 marks,sub3 marks");
+        	name=sc.nextLine();
+        	std=sc.nextLine();
+		sub1=sc.nextInt();
+		sub2=sc.nextInt();
+		sub3=sc.nextInt();
+		total=sub1+sub2+sub3;
+                if(sub1>=40 && sub2>=0 && sub3>=40)
+ 		{
+			percentage=total/3;
+			if(percentage>=75)
 			{
-				grade = "A Grade";
+				grade="Distinction";
 			}
-			else if (percent >= 65)
+			else if(percentage>=60)
 			{
-				grade = "B Grade";
+				grade="FirstClass";
 			}
-			else if(percent >= 55)
+			else if(percentage>=50)
 			{
-				grade = "C Grade";
+				grade="SecondClass";
 			}
-			else if(percent >= 45)
+			else if(percentage>=40)
 			{
-				grade = "D Grade";
+				grade="Pass";
 			}
 			else
 			{
-				grade = "Fail";
+				grade="Fail";
 			}
 		}
-		else
-		{
-			System.out.println("you are Fail");
-		}
-			System.out.println("Name : " + name);
-			System.out.println("Std : " + std);
-			System.out.println("Total : " + total);
-			System.out.println("Percent : " + percent);
-			System.out.println("Grade :" + grade);
+		else grade="---";
+			System.out.println("Name :"+name);
+			System.out.println("Standard :"+std);
+			System.out.println("Subject 1 :"+sub1); 
+			System.out.println("Subject 2 :"+sub2);
+			System.out.println("Subject 3 :"+sub3);
+			System.out.println("Total Marks out of 300 :"+total);
+			System.out.println("Percentage :"+percentage);
+			System.out.println("Garde :"+grade);
 	}
-}
+  }				
